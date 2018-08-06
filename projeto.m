@@ -30,22 +30,24 @@ hold off
 % % figure,imshow(rgbIm),title('rgb');
  
  Im = limiar(Im4);
- RGB = label2rgb(bwlabel(Im),@jet,[.5 .5 .5]);
+ figure,imshow(Im),title('centro');
+ L = bwlabel(Im);
+ RGB = label2rgb(L,@jet,[.5 .5 .5]);
  figure,imshow(RGB),title('centroids');
 
 % % rgbImage = ind2rgb(Im, map);
 % Im = imbinarize(Im);
 % % Im2 = imfill(Im);
- propes = regionprops(Im,'Centroid');
+ propes = regionprops(L,'Centroid');
 % whos;
 centroids = cat(1, propes.Centroid);
  figure,imshow(Im),title('centroids');
 hold on
 plot(centroids(:,1),centroids(:,2), 'b*')
 hold off
-% [centers,radii] = imfindcircles(Im,5);
-% figure,imshow(Im),title('circulos');
-% hold on
-% viscircles(centers, radii,'Color','b');
-% hold off
+[centers,radii] = imfindcircles(Im,[5 30]);
+figure,imshow(Im),title('circulos');
+hold on
+viscircles(centers, radii,'Color','b');
+hold off
 % 
