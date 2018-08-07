@@ -1,5 +1,6 @@
-%Projeto de Processamento de Imagens
-%Gabriel Piovani Moreira dos Santos RA:552216
+% Projeto de Processamento de Imagens
+% Gabriel Piovani Moreira dos Santos RA: 552216
+% Luciane da Silva Lopes RA: 552348
 
 close all
 clear all
@@ -72,5 +73,5 @@ pontuacao = calculaPontuacao(d, distPontuada, numLinhas);
 total = sum(cell2mat(pontuacao)); % calcula a pontuacao total da imagem
 disp(total);
 %pInversa = pontuacao.';
-msg = sprintf('Pontuação Total: %d', total);
+msg = sprintf('PontuaÃ§Ã£o Total: %d', total);
 msgbox(msg, 'Total');
