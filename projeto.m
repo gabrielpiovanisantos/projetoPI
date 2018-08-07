@@ -20,8 +20,8 @@ figure, imshow(Im4),title('com imclose');
 % Im = funcaoMediana(Im);
 figure,imshow(Im),title('centro');
 hold on
-[lin, col] = size(Im);
-C = round([col lin]/2);
+[lin, col, ~] = size(Im); % encontra o tamanho da imagem
+C = [col lin]/2; % encontra o centro da imagem
 plot(C(1),C(2),'*r');
 hold off
  
@@ -50,4 +50,11 @@ figure,imshow(Im),title('circulos');
 hold on
 viscircles(centers, radii,'Color','b');
 hold off
-% 
+
+% calculo das distancias entre os centroids e o alvo central
+s = size(centers,1); % encontra o numero de linhas na matriz
+for i = 1:s
+    p = [C; centers(i,:)];
+    %fprintf('%d - %f\n', i, norm(C-centers(i,:)));
+    fprintf('%d - %f\n', i, pdist(p, 'euclidean'));
+end
