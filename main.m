@@ -13,11 +13,11 @@ clc;
 [Im5, map5] = imread('im5.jpg');
 [Im6, map6] = imread('im6.jpg');
 
-msg1 = sprintf('\nLuciane: %d', projeto(Im1,map1));
-msg2 = sprintf('Gabriel: %d', projeto(Im2,map2));
-msg3 = sprintf('Junior: %d', projeto(Im3,map3));
-msg4 = sprintf('Valdir: %d', projeto(Im4,map4));
-msg5 = sprintf('Patricia: %d', projeto(Im5,map5));
-msg6 = sprintf('Isabela: %d', projeto(Im6,map6));
+msg1 = sprintf('\nJogador 1: %10.2f', projeto(Im1,map1));
+msg2 = sprintf('Jogador 2: %10.2f', projeto(Im2,map2));
+msg3 = sprintf('Jogador 3: %10.2f', projeto(Im3,map3));
+msg4 = sprintf('Jogador 4: %10.2f', projeto(Im4,map4));
+msg5 = sprintf('Jogador 5: %10.2f', projeto(Im5,map5));
+msg6 = sprintf('Jogador 6: %10.2f', projeto(Im6,map6));
 
-msgbox({'PLACAR'; msg1; msg2; msg3; msg4; msg5; msg6}, 'Placar');
+msgbox({'PLACAR (o jogador que tiver a menor soma de distancia ganha)'; msg1; msg2; msg3; msg4; msg5; msg6}, 'Placar');

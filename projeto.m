@@ -49,13 +49,13 @@ viscircles(centers, radii,'Color','b');
 hold off
 
 % aqui guardamos os pontos dos limites de cada area pontuada
-areaPontuacao = [481.4310,  438.0501; 481.4310, 395.9452; 481.4310, 351.5643; 480.2930, 309.4593; 481.4310, 265.0784; 481.4310, 224.1114; 483.7070, 178.5926; 482.5690, 137.6256; 482.5690, 95.5206; 480.2930, 53.4157];
+% areaPontuacao = [481.4310,  438.0501; 481.4310, 395.9452; 481.4310, 351.5643; 480.2930, 309.4593; 481.4310, 265.0784; 481.4310, 224.1114; 483.7070, 178.5926; 482.5690, 137.6256; 482.5690, 95.5206; 480.2930, 53.4157];
 
 % calcula as distancias pontuadas
-for i = 1:10
-    pontos = [C; areaPontuacao(i,:)];
-    distPontuada{i} = pdist(pontos, 'euclidean'); % distancia entre o alvo e cada area pontuada
-end
+% for i = 1:10
+%     pontos = [C; areaPontuacao(i,:)];
+%     distPontuada{i} = pdist(pontos, 'euclidean'); % distancia entre o alvo e cada area pontuada
+% end
 
 % calculo das distancias entre os centroids e o alvo central
 numLinhas = size(centers,1); % encontra o numero de linhas na matriz
@@ -65,7 +65,7 @@ for i = 1:numLinhas
 end
 
 % recebe um vetor com as pontuacoes de cada tiro
-pontuacao = calculaPontuacao(d, distPontuada, numLinhas);
-total = sum(cell2mat(pontuacao)); % calcula a pontuacao total da imagem
+% pontuacao = calculaPontuacao(d, distPontuada, numLinhas);
+total = sum(cell2mat(d)); % calcula a pontuacao total da imagem
 
 f = total;
