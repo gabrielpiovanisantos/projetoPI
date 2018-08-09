@@ -6,10 +6,10 @@ function f = projeto(Im, map, min, max)
 
 figure, imshow(Im), title('original');
 figure, imshow(Im), title('centro');
-[lin, col, ~] = size(Im); % pega o tamanho da imagem
-alvo = [col lin]/2; % encontra o alvo
+lin, col, ~] = size(Im); % encontra o tamanho da imagem
+alvo = [col lin]/2; % encontra o centro da imagem
 hold on
-plot(alvo(1), alvo(2), '*b'); % mostra o centro alvo
+plot(alvo(1), alvo(2), '*b');
 hold off
 
 Im = rgb2gray(Im);
