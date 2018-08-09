@@ -14,7 +14,7 @@ hold off
 
 Im = rgb2gray(Im);
 se = strel('disk', 10); % elemento estruturante para usar no imclose
-Im = imclose(Im, se);
+Im = imclose(Im, se); % aplicação do fechamento para preencher as falhas
 figure, imshow(Im), title('com imclose');
  
 Im = limiar(Im, min, max);

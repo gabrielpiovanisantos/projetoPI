@@ -7,8 +7,8 @@ close all
 clc;
 
 % EXEMPLOS DE ALVOS (descomente uma linha por vez para testar)
-% [Im, map] = imread('img/ex1.jpg'); projeto(Im, map, 50, 101);
- [Im, map] = imread('img/ex2.jpg'); projeto(Im, map, 30, 100);
+ [Im, map] = imread('img/ex1.jpg'); projeto(Im, map, 50, 101);
+% [Im, map] = imread('img/ex2.jpg'); projeto(Im, map, 30, 100);
 % [Im, map] = imread('img/ex3.png'); projeto(Im, map, 0, 60);
 % [Im, map] = imread('img/ex4.png'); projeto(Im, map, 30, 40);
 % [Im, map] = imread('img/ex5.jpg'); projeto(Im, map, 0, 50);
